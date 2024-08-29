@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Large Image Boxes with Navbar</title>
+
+    <!-- External CSS Links -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body {
+            background-image: url('Trans.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+            margin: 0;
+            font-family: "Lato", sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+        }
+
+        .box {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover {
+            transform: translateY(-15px);
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .box h3 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .box p {
+            font-size: 16px;
+            color: #777;
+            margin: 10px 0 0;
+        }
+
+        .w3-bar .w3-bar-item {
+            padding: 14px 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="https://www.gateofheaven.co.in/" class="w3-bar-item w3-button w3-padding-large">GATE OF HEAVEN</a>
+            <a href="Gallery.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Our Gallery</a>
+            <a href="Gate of heaven .apk" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Our App</a>
+            <a href="https://youtube.com/@Ellison853?si=zaShm9C2R38SEQcO" class="w3-bar-item w3-button w3-padding-large w3-hide-small">YouTube Channel</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">More <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="Youth.html" class="w3-bar-item w3-button">Youth Meeting Service</a>
+                    <a href="Sunday church.html" class="w3-bar-item w3-button">Sunday Church Verses</a>
+                    <a href="Saturday.html" class="w3-bar-item w3-button">Saturday Songs Practice</a>
+                </div>
+            </div>
+            <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="Sunday church.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Sunday Church</a>
+        <a href="Youth.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Youth Meeting</a>
+        <a href="Gallery.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Our Gallery</a>
+        <a href="About.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
+        <a href="Gate of heaven .apk" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Our App</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cIYFAddTEifhcRzZ0hZsEZYH9UPSJF4dqdHkzhKTwYv5tN0RY-EkEb0&s=10" alt="Image 1">
+            <h3>Gospal of Matthew</h3>
+            <p>First Book of Gospal</p>
+        </div>
+        <div class="box">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRWCpi-Z6oiQMnxLPytiFknvE5CHqMpkEZwT6agMXTB-hINhbR184dhfg&s=10" alt="Image 2">
+            <h3>Gospal of Luke</h3>
+            <p>Third Book of Gospal</p>
+        </div>
+        </div>
+    </div>
+
+    <!-- Script for Toggle Navbar -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        var modal = document.getElementById('ticketModal');
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
